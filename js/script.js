@@ -2,12 +2,50 @@ const slider = document.querySelectorAll('.slider');
 const prevBtn = document.querySelector('.prevBtn');
 const nextBtn = document.querySelector('.nextBtn');
 
+let counter = 0;
+
+// function slideFunction(item, index) {
+//     item.forEach(slideItem => {
+//         slideItem.style.transform = `translate(-${index * 100}%)`
+//     })
+// }
+
+
+// nextBtn.addEventListener("click",() => {
+//     counter++;
+//     slideFunction(slider, counter);
+// })
+// prevBtn.addEventListener("click",() => {
+//     counter--;
+//     slideFunction(slider, counter);
+// })
+
 function slideFunction(item, index) {
-    console.log(item);
-    console.log(index);
+    item.forEach(slideItem => {
+        slideItem.style.transform = `translate(-${index * 100}%)`
+    })
+    
 }
 
-slideFunction(slider, 5)
-// slider.forEach(eachItem => {
-//     // item.style.transform = "translateX(-0%)";
-// })
+
+
+nextBtn.addEventListener("click",() => {
+    counter++;
+    if (counter === slider.length) {
+        counter = 0;
+    }
+    slideFunction(slider, counter);
+})
+prevBtn.addEventListener("click",() => {
+    counter--;
+    if (counter < 0) {
+        counter = slider.length - 1;
+    }
+    slideFunction(slider, counter);
+    
+})
+
+
+
+// if (counter >)
+// console.log(slider.length);
