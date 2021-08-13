@@ -1,6 +1,11 @@
 const slider = document.querySelectorAll(".slider");
 const prevBtn = document.querySelector(".prevBtn");
 const nextBtn = document.querySelector(".nextBtn");
+const profile = document.querySelectorAll(".profile h3");
+
+profile.forEach(item => {
+    item.style.marginTop = '5rem';
+})
 
 let counter = 0;
 
@@ -19,14 +24,19 @@ let counter = 0;
 //     slideFunction(slider, counter);
 // })
 
-// window.addEventListener("DOMContentLoaded", onLoadFn(slider, counter));
-// function onLoadFn(items, index) {
-//     counter++;
-//     items.forEach(item => {
-//         item.style.transform = `translate(-${index * 100}%)`;
-//     })
-// }
+window.addEventListener("DOMContentLoaded", onLoadFn);
 
+function onLoadFn() {
+    let hundred = -100;
+    for (let i = 0; i < slider.length; i++) {
+        hundred += 100;
+        slider[i].style.left = `${hundred}%`;
+        
+
+    }
+    slider.style.left = `-100%`;
+    // slider[0].style.left = `${hundred}%`;
+}
 
 
 function slideFunction(item, index) {
