@@ -38,8 +38,9 @@ img {
     max-width: 800px;
     margin: 5rem 0 0;
     border: .25rem solid var(--clr-1);
-    /* overflow: hidden; */
+    overflow: hidden;
 }
+
 
 .slider {
     position: absolute;
@@ -71,11 +72,11 @@ img {
     margin-bottom: 8rem;
 }
 
-/* .slider:nth-child(3) h3 {
+.slider:nth-child(3) h3 {
     margin-top: 5rem;
-} */
+}
 
-/* .slider:nth-child(1) {
+.slider:nth-child(1) {
     left: 0%;
 }
 .slider:nth-child(2) {
@@ -83,7 +84,7 @@ img {
 }
 .slider:nth-child(3) {
     left: 200%;
-} */
+}
 
 .ctrl-buttons button {
     background: transparent;
